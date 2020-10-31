@@ -1,0 +1,40 @@
+/* .imageWrap{
+    height: 100%;
+    padding-right:33.33vh;
+    position: relative;
+}
+
+.imageWrap > img{
+    height: 100%;
+    position: absolute;
+    transition: all .4s ease;
+    top: 0;
+} */
+
+.imageWrapAnimation > img:nth-child(1){ /* first <img> child of <div> */
+    filter: alpha(opacity=100); /* IE stuff */
+    opacity: 1;
+}
+.imageWrapAnimation > img:nth-child(2){ /* second <img> child of <div> */
+    filter: alpha(opacity=0); /* IE stuff */
+    opacity: 0;
+}
+/* hover */
+.imageWrapAnimation:hover > img:nth-child(1){ 
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.imageWrapAnimation:hover > img:nth-child(2){ 
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.imageWrapAnimation:active > img:nth-child(1){ 
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.imageWrapAnimation:active > img:nth-child(2){ 
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
