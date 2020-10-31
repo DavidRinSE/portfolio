@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        borderRadius: '5px 5px 0px 0px',
         '& h3': {
             fontSize: '.95em',
             fontFamily: "'Sora', sans-serif",

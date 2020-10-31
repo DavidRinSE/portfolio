@@ -6,7 +6,11 @@ import "./ProjectAnimations.css"
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         width: '100%',
-        height: '33.33vh',
+        height: '265px',
+        [theme.breakpoints.up('1920')]: {
+            height: '325px'
+        },
+        // height: '33.33vh',
         display: 'flex',
         flexDirection: 'row',
     },
@@ -15,7 +19,10 @@ const useStyles = makeStyles((theme) => ({
     },
     imageWrap: {
         height: '100%',
-        paddingRight:'33.33vh',
+        paddingRight:'265px',
+        [theme.breakpoints.up('1920')]: {
+            paddingRight: '325px'
+        },
         position: 'relative',
         '& img': {
             height: '100%',

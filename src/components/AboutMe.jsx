@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     },
     imageWrapper: {
         position: 'relative',
-        width: '75%',
+        maxWidth: '212px',
+        width: '100%',
         margin: '0px 25px',
         '&:before': {
             content: '""',
@@ -39,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     story: {
         marginLeft: 'auto',
         marginRight: 'auto',
-        width: '65vw',
+        maxWidth: '1258px',
+        width: '75vw',
         height: '300px',
         display: 'flex',
         alignItems: 'center',

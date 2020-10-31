@@ -17,7 +17,8 @@ const useStyles = makeStyles(() => ({
         }
     },
     projects: {
-        width: '50vw',
+        maxWidth: '960px',
+        width: '65vw',
         marginRight: 'auto',
         marginLeft: 'auto'
     },

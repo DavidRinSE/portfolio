@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
         width: '50%',
         marginRight: 'auto',
         marginLeft: 'auto',
+        marginBottom: '14px'
     },
     title: {
         fontSize: '1.75em',
