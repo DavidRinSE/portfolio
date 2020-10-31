@@ -19,9 +19,16 @@ const useStyles = makeStyles((theme) => ({
         "& strong": {
             color: '#c64349'
         },
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('1025')]:{
+            fontSize: '3.5em',
+            marginLeft: '-75px'
+        },
+        [theme.breakpoints.down('690')]: {
             fontSize: '2em',
-            margin: '0px 0px 0px -100px'
+            marginLeft: '-100px'
+        },
+        [theme.breakpoints.down('400')]: {
+            fontSize: '1.75em',
         }
     },
     button: {
@@ -40,9 +47,14 @@ const useStyles = makeStyles((theme) => ({
             marginTop: 'auto',
             lineHeight: '60px',
             cursor: 'pointer',
-            [theme.breakpoints.down('sm')]: {
+            [theme.breakpoints.down('1025')]: {
                 fontSize: '.85em',
                 lineHeight: '45px'
+            },
+            [theme.breakpoints.down('690')]: {
+                fontSize: '.65em',
+                lineHeight: '35px',
+                fontWeight: '600'
             }
         },
         "&:hover, &:active": {
@@ -50,12 +62,16 @@ const useStyles = makeStyles((theme) => ({
             borderColor: '#c64349',
             color: 'white'
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('1025')]: {
             width: '135px',
             height: '45px',
             marginTop: '24px',
             border: '2px solid',
             transition: 'all 0.1s ease',
+        },
+        [theme.breakpoints.down('690')]: {
+            width: '100px',
+            height: '35px'
         }
     }
 }));

@@ -5,7 +5,7 @@ import miniFinanceImages from "../images/mini-finance"
 import miniFinanceBackendImages from "../images/mini-finance-backend"
 import readitImages from "../images/readit"
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     wrapper: {
         marginBottom: '75px',
         '& h2': {
@@ -13,14 +13,27 @@ const useStyles = makeStyles(() => ({
             fontFamily: "'Sora', sans-serif",
             fontWeight: '500',
             textAlign: 'center',
-            marginBottom: '50px'
+            marginBottom: '50px',
+            [theme.breakpoints.down('1025')]:{
+                fontSize: '1.75em',
+            },
+            [theme.breakpoints.down('690')]: {
+                fontSize: '1.5em'
+            }
         }
     },
     projects: {
         maxWidth: '960px',
         width: '65vw',
         marginRight: 'auto',
-        marginLeft: 'auto'
+        marginLeft: 'auto',
+        [theme.breakpoints.down('1025')]: {
+            width: '80vw'
+        },
+        [theme.breakpoints.down('690')]: {
+            width: '95%',
+            maxWidth: '400px'
+        }
     },
 }));
 

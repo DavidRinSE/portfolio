@@ -11,7 +11,13 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: "'Sora', sans-serif",
             fontWeight: '500',
             textAlign: 'center',
-            marginBottom: '50px'
+            marginBottom: '50px',
+            [theme.breakpoints.down('1025')]:{
+                fontSize: '1.75em',
+            },
+            [theme.breakpoints.down('690')]: {
+                fontSize: '1.5em'
+            }
         }
     },
     imageWrapper: {
@@ -23,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
             content: '""',
             display: 'block',
             paddingTop: '100%',
+        },
+        [theme.breakpoints.down('690')]: {
+            width: '35%',
+            marginTop: '7px'
         }
     },
     image: {
@@ -48,6 +58,13 @@ const useStyles = makeStyles((theme) => ({
         border: '5px solid #1e1e1e',
         borderRadius: '12px',
         marginBottom: '50px',
+        [theme.breakpoints.down('1025')]: {
+            width: '90vw'
+        },
+        [theme.breakpoints.down('690')]: {
+            flexDirection: 'column',
+            height: 'auto'
+        }
     },
     textWrap: {
         height: '100%',
@@ -72,6 +89,20 @@ const useStyles = makeStyles((theme) => ({
             fontFamily: 'Montserrat',
             ineHeight: '1.15em',
             color: 'white'
+        },
+        [theme.breakpoints.down('1025')]: {
+            '& h3': {
+                fontSize: '1.15em',
+            },
+            '& p': {
+                width: '90%',
+                fontSize: '.8em',
+                lineHeight: '150%'
+            },
+        },
+        [theme.breakpoints.down('960')]: {
+            clipPath: 'polygon(0 15px, 101% 0, 101% 101%, 0 101%)',
+            padding: '10px 0'
         }
     }
 }))

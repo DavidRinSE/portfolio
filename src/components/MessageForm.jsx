@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
         '& .MuiFormControl-root, .MuiButton-contained': {
             marginTop: '12px'
         },
+        [theme.breakpoints.down('690')]: {
+            width: '325px'
+        }
     },
 }))
 

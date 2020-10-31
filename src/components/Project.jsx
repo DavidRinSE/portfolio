@@ -10,12 +10,19 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('1920')]: {
             height: '325px'
         },
-        // height: '33.33vh',
         display: 'flex',
         flexDirection: 'row',
+        [theme.breakpoints.down('690')]: {
+            height: 'auto',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginBottom: '25px'
+        }
     },
     rightImage: {
-        flexDirection: 'row-reverse'
+        [theme.breakpoints.up('690')]: {
+            flexDirection: 'row-reverse'
+        }
     },
     imageWrap: {
         height: '100%',
@@ -29,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
             position: 'absolute',
             transition: 'all .4s ease',
             top: 0,
+        },
+        [theme.breakpoints.down('690')]: {
+            height: '200px',
+            paddingRight: '200px',
         }
     },
     textWrap: {
@@ -76,7 +87,7 @@ const Project = (props) => {
                     {/* {data.repo && <a className={classes.link1} href={data.repo}>See The Code</a>}
                     {data.live && <a className={classes.link2} href={data.live}>Live App</a>}
                     {data.video && <a className={classes.link3} href={data.video}>Video Demo</a>} */}
-                    {data.repo && <Button variant="contained" color="primary" href={data.repo} style={{marginRight: '7px'}}>View Code</Button>}
+                    {data.repo && <Button variant="contained" color="primary" href={data.repo} style={{marginRight: '7px'}} size='small'>View Code</Button>}
                     {data.live && <Button variant="contained" color="secondary" href={data.live}>Live App</Button>}
                     {/* {data.video && <a className={classes.link3} href={data.video}>Video Demo</a>} */}
                 </div>

@@ -5,7 +5,11 @@ const useStyles = makeStyles((theme) => ({
     wrapper: {
         width: '48%',
         border: '2px solid #1e1e1e',
-        borderRadius: '10px'
+        borderRadius: '10px',
+        [theme.breakpoints.down('690')]: {
+            width: '100%',
+            margin: '7px 0'
+        }
     },
     header: {
         backgroundColor: '#1e1e1e',

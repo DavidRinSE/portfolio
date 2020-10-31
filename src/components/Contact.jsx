@@ -17,7 +17,13 @@ const useStyles = makeStyles((theme) => ({
             marginBottom: '50px',
             marginLeft: 'auto',
             marginRight: 'auto',
-            color: 'white'
+            color: 'white',
+            [theme.breakpoints.down('1025')]:{
+                fontSize: '1.75em',
+            },
+            [theme.breakpoints.down('690')]: {
+                fontSize: '1.5em'
+            }
         }
     }
 }))
