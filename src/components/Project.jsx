@@ -77,8 +77,8 @@ const Project = (props) => {
     return (
         <div className={`${classes.wrapper} ${data.rightImage ? classes.rightImage : ''}`}>
             <div className={`imageWrapAnimation ${classes.imageWrap}`}>  {/* Image animation solution found here: https://stackoverflow.com/a/13034571/13558496 */}
-                <img src={data.images.foreground} />
-                {data.images.background && <img src={data.images.background} />}
+                <img src={data.images.foreground} alt="Project"/>
+                {data.images.background && <img src={data.images.background} alt="Project Technologies"/>}
             </div>
             <div className={classes.textWrap}>
                 <h3 className={classes.title}>{data.name}</h3>

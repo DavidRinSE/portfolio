@@ -47,10 +47,10 @@ const Technologies = () => {
     const classes = useStyles()
     const {frontend, backend, devops, tools} = technologies
 
-    const frontendElements = frontend.map(logo => <img src={logo.img}/>)
-    const backendElements = backend.map(logo => <img src={logo.img}/>)
-    const devopsElements = devops.map(logo => <img src={logo.img}/>)
-    const toolsElements = tools.map(logo => <img src={logo.img}/>)
+    const frontendElements = frontend.map(logo => <img src={logo.img} alt="Frontend Technology"/>)
+    const backendElements = backend.map(logo => <img src={logo.img} alt="Backend Technology"/>)
+    const devopsElements = devops.map(logo => <img src={logo.img} alt="DevOps Technology"/>)
+    const toolsElements = tools.map(logo => <img src={logo.img} alt="Development Tools"/>)
 
     const matches = useMediaQuery('(min-width: 690px)')
     return (

@@ -21,7 +21,7 @@ import redux from "./reduxlogo.png"
 import sequelize from "./sequelize.png"
 import travis from "./travis.png"
 
-export default {
+const technologies = {
     frontend: [
         {name: 'Bootstrap', img: bootstrap},
         {name: 'CSS', img: css},
@@ -55,3 +55,4 @@ export default {
         {name: 'Postman', img: postman},
     ]
 }
+export default technologies

@@ -1,4 +1,5 @@
 import foreground from "./foreground.jpg"
 import background from "./background.jpg"
 
-export default {foreground, background}
+const images = {foreground, background}
+export default images
