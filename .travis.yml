@@ -15,12 +15,12 @@ deploy:
   provider: s3
   access_key_id: $AWS_S3_ACCESS_KEY
   secret_access_key: $AWS_S3_SECRET_KEY
-  bucket: blog.kalob.net
+  bucket: davidr.in
   skip_cleanup: true
   local-dir: build
   acl: public_read
   region: us-east-2
   on:
-    repo: PorterK/kalob.net-blog
+    repo: DavidRinSE/portfolio
 after_deploy:
 - travis-ci-cloudfront-invalidation -a $AWS_CLOUDFRONT_ACCESS_KEY -s $AWS_CLOUDFRONT_SECRET -c $AWS_CLOUDFRONT_DIST_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
