@@ -62,7 +62,7 @@ const Projects = () => {
             repo: 'https://github.com/DavidRinSE/Readit-capstone'
         }
     ]
-    const projects = projectItems.map(project => <><Project data={project}/>{project.break && <div className={classes.break} />}</>)
+    const projects = projectItems.map(project => <Project key={Math.floor(Math.random() * 1000)} data={project}/>)
     return (
         <div className={classes.wrapper}>
             <h2>Projects</h2>
