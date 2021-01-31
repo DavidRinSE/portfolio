@@ -50,8 +50,8 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     moreProjects: {
-        maxWidth: '960px',
-        width: '65vw',
+        maxWidth: '1000px',
+        width: '75vw',
         marginRight: 'auto',
         marginLeft: 'auto'
     }
@@ -75,12 +75,6 @@ const Projects = () => {
             live: 'https://mini-finance.davidr.in',
             rightImage: true
         },
-        {
-            name: 'Django Reddit Clone',
-            images: readitImages,
-            description: 'As my final capstone project for Kenzie Academy my group made Readit, a Reddit clone made with Django. We only had two weeks to complete the project, and the majority of the focus was on the back end of the application. This was a difficult challenge, we were much more comfortable with Javascript for web applications at the beginning of this project. This was a great opportunity to put the Agile practices we had learned to use in a group project. Hover or tap image to view technologies.',
-            repo: 'https://github.com/DavidRinSE/Readit-capstone'
-        }
     ]
     const projects = projectItems.map(project => <Project key={Math.floor(Math.random() * 1000)} data={project}/>)
     return (
