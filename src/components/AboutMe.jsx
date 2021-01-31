@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/styles';
-import profile from "../images/profile.jpg"
+import profile from "../images/profile2.jpeg"
 import Technologies from "./Technologies"
 
 const useStyles = makeStyles((theme) => ({

@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from '@material-ui/styles';
 import Project from "./Project";
+import MoreProjects from "./MoreProjects"
 import miniFinanceImages from "../images/mini-finance"
 import miniFinanceBackendImages from "../images/mini-finance-backend"
 import readitImages from "../images/readit"
@@ -20,6 +21,19 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down('690')]: {
                 fontSize: '1.5em'
             }
+        },
+    },
+    subheader: {
+        fontSize: '2.0em',
+        fontFamily: "'Sora', sans-serif",
+        fontWeight: '500',
+        textAlign: 'center',
+        marginBottom: '50px',
+        [theme.breakpoints.down('1025')]:{
+            fontSize: '1.75em',
+        },
+        [theme.breakpoints.down('690')]: {
+            fontSize: '1.5em'
         }
     },
     projects: {
@@ -35,6 +49,12 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: '400px'
         }
     },
+    moreProjects: {
+        maxWidth: '960px',
+        width: '65vw',
+        marginRight: 'auto',
+        marginLeft: 'auto'
+    }
 }));
 
 const Projects = () => {
@@ -68,6 +88,10 @@ const Projects = () => {
             <h2>Projects</h2>
             <div className={classes.projects}>
                 {projects}
+            </div>
+            <h3 className={classes.subheader}>More Projects</h3>
+            <div className={classes.moreProjects}>
+                <MoreProjects />
             </div>
         </div>
     );
