@@ -1,7 +1,21 @@
 import React from "react"
 import { makeStyles } from '@material-ui/styles';
-import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Box, Collapse, IconButton, Typography, Paper } from '@material-ui/core';
-import {KeyboardArrowDown, KeyboardArrowUp, GitHub} from '@material-ui/icons';
+import { TableContainer, Table, TableRow, TableCell, TableBody, IconButton, Paper } from '@material-ui/core';
+import {GitHub} from '@material-ui/icons';
+import MobileProjectCard from "./MobileProjectCard"
+
+const useStyles = makeStyles((theme) => ({
+    tableRoot: {
+        [theme.breakpoints.down('690')]: {
+            display: 'none'
+        }
+    },
+    mobileRoot: {
+        [theme.breakpoints.up('690')]: {
+            display: 'none'
+        }
+    }
+}))
 
 function Row(props) {
     const { row } = props;
@@ -35,15 +49,25 @@ const rows = [
 ]
 
 export default function MoreProjects() {
+    const classes = useStyles()
     return (
-        <TableContainer component={Paper}>
-            <Table aria-label="projects table">
-                <TableBody>
-                    {rows.map((row) => (
-                    <Row key={row.name} row={row} />
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <>
+            <div className={classes.tableRoot}>
+                <TableContainer component={Paper}>
+                    <Table aria-label="projects table">
+                        <TableBody>
+                            {rows.map((row) => (
+                            <Row key={row.name} row={row} />
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </div>
+            <div className={classes.mobileRoot}>
+                {rows.map((row) => (
+                    <MobileProjectCard key={row.name} row={row} />
+                ))}
+            </div>
+        </>
     );
 }

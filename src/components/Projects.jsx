@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
                 fontSize: '1.75em',
             },
             [theme.breakpoints.down('690')]: {
-                fontSize: '1.5em'
+                fontSize: '1.5em',
+                marginBottom: '25px'
             }
         },
     },
@@ -33,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1.75em',
         },
         [theme.breakpoints.down('690')]: {
-            fontSize: '1.5em'
+            fontSize: '1.5em',
+            marginBottom: '25px',
         }
     },
     projects: {
@@ -53,7 +55,10 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '1000px',
         width: '75vw',
         marginRight: 'auto',
-        marginLeft: 'auto'
+        marginLeft: 'auto',
+        [theme.breakpoints.down('690')]: {
+            width: '100%'
+        }
     }
 }));
 
