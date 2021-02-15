@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from '@material-ui/styles';
 import Project from "./Project";
+import MoreProjects from "./MoreProjects"
 import miniFinanceImages from "../images/mini-finance"
 import miniFinanceBackendImages from "../images/mini-finance-backend"
 import readitImages from "../images/readit"
@@ -18,8 +19,23 @@ const useStyles = makeStyles((theme) => ({
                 fontSize: '1.75em',
             },
             [theme.breakpoints.down('690')]: {
-                fontSize: '1.5em'
+                fontSize: '1.5em',
+                marginBottom: '25px'
             }
+        },
+    },
+    subheader: {
+        fontSize: '2.0em',
+        fontFamily: "'Sora', sans-serif",
+        fontWeight: '500',
+        textAlign: 'center',
+        marginBottom: '50px',
+        [theme.breakpoints.down('1025')]:{
+            fontSize: '1.75em',
+        },
+        [theme.breakpoints.down('690')]: {
+            fontSize: '1.5em',
+            marginBottom: '25px',
         }
     },
     projects: {
@@ -35,6 +51,15 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: '400px'
         }
     },
+    moreProjects: {
+        maxWidth: '1000px',
+        width: '75vw',
+        marginRight: 'auto',
+        marginLeft: 'auto',
+        [theme.breakpoints.down('690')]: {
+            width: '100%'
+        }
+    }
 }));
 
 const Projects = () => {
@@ -55,12 +80,6 @@ const Projects = () => {
             live: 'https://mini-finance.davidr.in',
             rightImage: true
         },
-        {
-            name: 'Django Reddit Clone',
-            images: readitImages,
-            description: 'As my final capstone project for Kenzie Academy my group made Readit, a Reddit clone made with Django. We only had two weeks to complete the project, and the majority of the focus was on the back end of the application. This was a difficult challenge, we were much more comfortable with Javascript for web applications at the beginning of this project. This was a great opportunity to put the Agile practices we had learned to use in a group project. Hover or tap image to view technologies.',
-            repo: 'https://github.com/DavidRinSE/Readit-capstone'
-        }
     ]
     const projects = projectItems.map(project => <Project key={Math.floor(Math.random() * 1000)} data={project}/>)
     return (
@@ -68,6 +87,10 @@ const Projects = () => {
             <h2>Projects</h2>
             <div className={classes.projects}>
                 {projects}
+            </div>
+            <h3 className={classes.subheader}>More Projects</h3>
+            <div className={classes.moreProjects}>
+                <MoreProjects />
             </div>
         </div>
     );
