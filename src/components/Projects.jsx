@@ -4,14 +4,14 @@ import Project from "./Project";
 import MoreProjects from "./MoreProjects"
 import miniFinanceImages from "../images/mini-finance"
 import miniFinanceBackendImages from "../images/mini-finance-backend"
-import readitImages from "../images/readit"
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         marginBottom: '75px',
         '& h2': {
             fontSize: '2.5em',
-            fontFamily: "'Sora', sans-serif",
+            fontFamily: theme.fonts.header,
             fontWeight: '500',
             textAlign: 'center',
             marginBottom: '50px',
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subheader: {
         fontSize: '2.0em',
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: theme.fonts.subheader,
         fontWeight: '500',
         textAlign: 'center',
         marginBottom: '50px',
@@ -84,11 +84,15 @@ const Projects = () => {
     const projects = projectItems.map(project => <Project key={Math.floor(Math.random() * 1000)} data={project}/>)
     return (
         <div className={classes.wrapper}>
-            <h2>Projects</h2>
+            <Fade up>
+                <h2>Projects</h2>
+            </Fade>
             <div className={classes.projects}>
                 {projects}
             </div>
-            <h3 className={classes.subheader}>More Projects</h3>
+            <Fade up>
+                <h3 className={classes.subheader}>More Projects</h3>
+            </Fade>
             <div className={classes.moreProjects}>
                 <MoreProjects />
             </div>

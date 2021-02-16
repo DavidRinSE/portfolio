@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         clipPath: 'polygon(0 20px, 100% 0, 100% 100%, 0 100%)',
         '& h2': {
             fontSize: '2.5em',
-            fontFamily: "'Sora', sans-serif",
+            fontFamily: theme.fonts.header,
             fontWeight: '500',
             textAlign: 'center',
             marginBottom: '50px',

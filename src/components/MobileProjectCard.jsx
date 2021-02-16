@@ -12,21 +12,21 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontSize: '.9em',
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: theme.fonts.subheader,
         fontWeight: '400',
         textAlign: 'left',
         margin: '12px 0px'
     },
     text: {
         fontSize: '0.75em',
-        fontFamily: 'Montserrat',
+        fontFamily: theme.fonts.body,
         lineHeight: '1em',
         textAlign: 'left',
         marginLeft: '12px'
     },
     technologyText: {
         fontSize: '0.75em',
-        fontFamily: 'Montserrat',
+        fontFamily: theme.fonts.body,
         lineHeight: '1em',
         textAlign: 'left',
     },

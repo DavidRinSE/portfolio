@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         // },
         '& h3': {
             fontSize: '1em',
-            fontFamily: "'Sora', sans-serif",
+            fontFamily: theme.fonts.subheader,
             fontWeight: '500',
             textAlign: 'center',
         },

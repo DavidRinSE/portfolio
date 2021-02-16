@@ -13,11 +13,12 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontSize: '5em',
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: theme.fonts.header,
         fontWeight: '500',
         textAlign: 'left',
+        color: theme.palette.primary.secondary,
         "& strong": {
-            color: '#c64349'
+            color: theme.palette.primary.accent1
         },
         [theme.breakpoints.down('1025')]:{
             fontSize: '3.5em',
@@ -36,13 +37,13 @@ const useStyles = makeStyles((theme) => ({
         height: '60px',
         marginTop: '17px',
         border: '3px solid',
-        borderColor: 'black',
+        borderColor: theme.palette.primary.secondary,
         borderRadius: '5px',
         backgroundColor: 'white',
         transition: 'all 0.5s ease',
         "& p": {
             fontSize: '1em',
-            fontFamily: 'Montserrat',
+            fontFamily: theme.fonts.body,
             textAlign: 'center',
             marginTop: 'auto',
             lineHeight: '60px',
@@ -58,9 +59,9 @@ const useStyles = makeStyles((theme) => ({
             }
         },
         "&:hover, &:active": {
-            backgroundColor: '#c64349',
-            borderColor: '#c64349',
-            color: 'white'
+            backgroundColor: theme.palette.primary.accent1,
+            borderColor: theme.palette.primary.accent1,
+            color:  theme.palette.primary.main
         },
         [theme.breakpoints.down('1025')]: {
             width: '135px',

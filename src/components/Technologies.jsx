@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import technologies from "../images/technologies"
 import Technology from "./Technology"
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontSize: '1.75em',
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: theme.fonts.header,
         fontWeight: '500',
         textAlign: 'center',
         marginBottom: '35px',
@@ -55,7 +56,9 @@ const Technologies = () => {
     const matches = useMediaQuery('(min-width: 690px)')
     return (
         <div className={classes.wrapper}>
-            <h3 className={classes.title}>Technologies I Have Used</h3>
+            <Fade up>
+                <h3 className={classes.title}>Technologies I Have Used</h3>
+            </Fade>
             <div className={classes.logoWrap}>
                 <Technology title="FRONTEND" style={(matches) ? {marginRight: '7px',marginBottom: '7px'} : {}}>
                     {frontendElements}

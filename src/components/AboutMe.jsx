@@ -2,13 +2,14 @@ import React from "react";
 import { makeStyles } from '@material-ui/styles';
 import profile from "../images/profile2.jpeg"
 import Technologies from "./Technologies"
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         minHeight: '100vh',
         '& h2': {
             fontSize: '2.5em',
-            fontFamily: "'Sora', sans-serif",
+            fontFamily: theme.fonts.header,
             fontWeight: '500',
             textAlign: 'center',
             marginBottom: '50px',
@@ -76,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
         clipPath: 'polygon(15px 0, 101% 0, 101% 100%, 0 100%)',
         '& h3': {
             fontSize: '1.5em',
-            fontFamily: "'Sora', sans-serif",
+            fontFamily: theme.fonts.subheader,
             fontWeight: '500',
             textAlign: 'center',
             margin: '12px 0px',
@@ -86,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
             width: '80%',
             fontSize: '1em',
             lineHeight: '120%',
-            fontFamily: 'Montserrat',
+            fontFamily: theme.fonts.body,
             ineHeight: '1.15em',
             color: 'white'
         },
@@ -111,16 +112,20 @@ const AboutMe = () => {
     const classes = useStyles()
     return (
         <div className={classes.wrapper}>
-            <h2>About Me</h2>
-            <div className={classes.story}>
-                <div className={classes.imageWrapper}>
-                    <div className={classes.image}></div>
+            <Fade up>
+                <h2>About Me</h2>
+            </Fade>
+            <Fade up>
+                <div className={classes.story}>
+                    <div className={classes.imageWrapper}>
+                        <div className={classes.image}></div>
+                    </div>
+                    <div className={classes.textWrap}>
+                        <h3>Hello, I'm Dave!</h3>
+                        <p>I have a passion for building things, and I love using code to solve complicated problems. I am a proud graduate of Kenzie Academy and a Kenzie certified Full-Stack Web Developer. My programing journey began as a highschool student, making apps in my free time to solve any problem I could come up with. Attending Kenzie Academy took the experience I had self-teaching development in highschool and expanded those skills, teaching me how to contribute on larger projects with teams using current professional tools and techniques.</p>
+                    </div>
                 </div>
-                <div className={classes.textWrap}>
-                    <h3>Hello, I'm Dave!</h3>
-                    <p>I have a passion for building things, and I love using code to solve complicated problems. I am a proud graduate of Kenzie Academy and a Kenzie certified Full-Stack Web Developer. My programing journey began as a highschool student, making apps in my free time to solve any problem I could come up with. Attending Kenzie Academy took the experience I had self-teaching development in highschool and expanded those skills, teaching me how to contribute on larger projects with teams using current professional tools and techniques.</p>
-                </div>
-            </div>
+            </Fade>
             <Technologies/>
         </div>
     )

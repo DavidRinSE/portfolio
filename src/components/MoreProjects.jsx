@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import { TableContainer, Table, TableRow, TableCell, TableBody, IconButton, Paper } from '@material-ui/core';
 import {GitHub} from '@material-ui/icons';
 import MobileProjectCard from "./MobileProjectCard"
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     tableRoot: {
@@ -19,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Row(props) {
     const { row } = props;
-    const [open, setOpen] = React.useState(false);
 
     return (
         <React.Fragment>
@@ -51,7 +51,7 @@ const rows = [
 export default function MoreProjects() {
     const classes = useStyles()
     return (
-        <>
+        <Fade up>
             <div className={classes.tableRoot}>
                 <TableContainer component={Paper}>
                     <Table aria-label="projects table">
@@ -68,6 +68,6 @@ export default function MoreProjects() {
                     <MobileProjectCard key={row.name} row={row} />
                 ))}
             </div>
-        </>
+        </Fade>
     );
 }

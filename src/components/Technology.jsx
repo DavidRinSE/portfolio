@@ -1,5 +1,6 @@
 import React from "react"
 import { makeStyles } from '@material-ui/styles';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '5px 5px 0px 0px',
         '& h3': {
             fontSize: '.95em',
-            fontFamily: "'Sora', sans-serif",
+            fontFamily: theme.fonts.subheader,
             fontWeight: '500',
             textAlign: 'center',
             color: 'white'
@@ -45,14 +46,16 @@ const useStyles = makeStyles((theme) => ({
 const Technology = (props) => {
     const classes = useStyles()
     return (
-        <div className={classes.wrapper} style={props.style}>
-            <div className={classes.header}>
-                <h3>{props.title}</h3>
+        <Fade up>
+            <div className={classes.wrapper} style={props.style}>
+                <div className={classes.header}>
+                    <h3>{props.title}</h3>
+                </div>
+                <div className={classes.content}>
+                    {props.children}
+                </div>
             </div>
-            <div className={classes.content}>
-                {props.children}
-            </div>
-        </div>
+        </Fade>
     )
 }
 
