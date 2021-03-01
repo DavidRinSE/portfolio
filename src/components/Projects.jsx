@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Projects = () => {
+const Projects = (props) => {
     const classes = useStyles()
     const projectItems = [
         {
@@ -83,7 +83,7 @@ const Projects = () => {
     ]
     const projects = projectItems.map(project => <Project key={Math.floor(Math.random() * 1000)} data={project}/>)
     return (
-        <div className={classes.wrapper}>
+        <div className={classes.wrapper} ref={props.wrapperRef}>
             <Fade up>
                 <h2>Projects</h2>
             </Fade>

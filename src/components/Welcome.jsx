@@ -77,12 +77,12 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Welcome = () => {
+const Welcome = (props) => {
     const classes = useStyles();
     return (
         <div className={classes.wrapper}>
             <h1 className={`text-pop-up-tr ${classes.title}`}>Hey there! I'm <br/><strong>Dave Richardson</strong>,<br/> a full-stack developer.</h1>
-            <div className={classes.button}><p>VIEW MY WORK</p></div>
+            <div className={classes.button} onClick={props.scroll}><p>VIEW MY WORK</p></div>
         </div>
     );
 }

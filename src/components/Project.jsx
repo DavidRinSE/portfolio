@@ -1,6 +1,8 @@
 import React from "react"
 import { makeStyles } from '@material-ui/styles';
-import { Button } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkIcon from '@material-ui/icons/Link';
 import "./ProjectAnimations.css"
 import Fade from 'react-reveal/Fade';
 
@@ -89,8 +91,8 @@ const Project = (props) => {
                         {/* {data.repo && <a className={classes.link1} href={data.repo}>See The Code</a>}
                         {data.live && <a className={classes.link2} href={data.live}>Live App</a>}
                         {data.video && <a className={classes.link3} href={data.video}>Video Demo</a>} */}
-                        {data.repo && <Button variant="contained" color="primary" href={data.repo} style={{marginRight: '7px'}} size='small'>View Code</Button>}
-                        {data.live && <Button variant="contained" color="secondary" href={data.live}>Live App</Button>}
+                        {data.repo && <IconButton href={data.repo}><GitHubIcon style={{color: 'black'}}/></IconButton>}
+                        {data.live && <IconButton href={data.live}><LinkIcon style={{color: 'black'}} /></IconButton>}
                         {/* {data.video && <a className={classes.link3} href={data.video}>Video Demo</a>} */}
                     </div>
                 </div>
