@@ -1,6 +1,7 @@
 import React from 'react';
 import './WelcomeAnimations.css'
 import { makeStyles } from '@material-ui/styles';
+import {Button} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -81,7 +82,8 @@ const Welcome = (props) => {
     const classes = useStyles();
     return (
         <div className={classes.wrapper}>
-            <h1 className={`text-pop-up-tr ${classes.title}`}>Hey there! I'm <br/><strong>Dave Richardson</strong>,<br/> a full-stack developer.</h1>
+            <h1 className={`text-pop-up-tr ${classes.title}`}>Hey there! I'm <br/><strong>David Richardson</strong>,<br/> a full-stack developer.</h1>
+            <Button href='https://resume.davidr.in' className={classes.resume}>VIEW MY RESUME</Button>
             <div className={classes.button} onClick={props.scroll}><p>VIEW MY WORK</p></div>
         </div>
     );
